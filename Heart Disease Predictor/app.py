@@ -1,15 +1,15 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from pathlib import Path
 
-# ---------------------------------------------> PAGE CONFIG
+# ----------->PAGE CONFIG
 st.set_page_config(
     page_title="Heart Risk Predictor",
     page_icon="❤️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
 # -------------------------------------------------> CUSTOM CSS
 st.markdown("""
 <style>
@@ -108,9 +108,12 @@ st.markdown("""
 
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("KNN_heart.pkl")
-    scaler = joblib.load("scaler.pkl")
-    expected_columns = joblib.load("columns.pkl")
+    #to  Get the folder where app.py is located
+    base_path = Path(__file__).parent
+
+    model = joblib.load(base_path / "KNN_heart.pkl")
+    scaler = joblib.load(base_path / "scaler.pkl")
+    expected_columns = joblib.load(base_path / "columns.pkl")
     return model, scaler, expected_columns
 
 model, scaler, expected_columns = load_artifacts()
