@@ -105,11 +105,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------------------------------------> LOAD MODEL 
+
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("knn_heart_model.pkl")
-    scaler = joblib.load("heart_scaler.pkl")
-    expected_columns = joblib.load("heart_columns.pkl")
+    model = joblib.load("KNN_heart.pkl")
+    scaler = joblib.load("scaler.pkl")
+    expected_columns = joblib.load("columns.pkl")
     return model, scaler, expected_columns
 
 model, scaler, expected_columns = load_artifacts()
