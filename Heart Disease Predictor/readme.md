@@ -184,6 +184,6 @@ The KNN model achieves solid performance (~88.6% accuracy) and is integrated int
 
 ---
 
-**Author:** Avinash01715  
+**Author:** Avinash Sharma
 **Repository:** ML-practice-notebook
 ```
