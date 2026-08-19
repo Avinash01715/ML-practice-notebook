@@ -129,38 +129,37 @@ The model performs well as a baseline risk screening tool. However, it should be
 
 ### Run Locally
 
-1. Install Dependencies
 ```bash
-pip install -r requirements.txt
-```
+# Clone the repository
+git clone https://github.com/Avinash01715/ML-practice-notebook.git
+cd ML-practice-notebook
 
-2. Run the Streamlit App
-```bash
+# Install dependencies (requirements.txt is at the repo root)
+pip install -r requirements.txt
+
+# Go into the project folder
+cd "Heart Disease Predictor"
+
+# Run the Streamlit app
 streamlit run app.py
 ```
-
-Make sure the following files are in the same directory as `app.py`:
-- `KNN_heart.pkl`
-- `scaler.pkl`
-- `columns.pkl`
-
-3. Explore the Notebook  
-Open `Heartdisease.ipynb` to see the complete EDA, preprocessing, and model comparison process.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-.
-├── app.py                  # Streamlit web application
-├── Heartdisease.ipynb      # Full analysis & modeling notebook
-├── heart.csv               # Dataset
-├── KNN_heart.pkl           # Trained KNN model
-├── scaler.pkl              # Fitted StandardScaler
-├── columns.pkl             # Expected feature columns
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+ML-practice-notebook/
+├── requirements.txt                    # Shared dependencies (repo root)
+│
+└── Heart Disease Predictor/
+    ├── app.py                          # Streamlit web application
+    ├── Heartdisease.ipynb              # Full analysis & modeling notebook
+    ├── heart.csv                       # Dataset
+    ├── KNN_heart.pkl                   # Trained KNN model
+    ├── scaler.pkl                      # Fitted StandardScaler
+    ├── columns.pkl                     # Expected feature columns
+    └── readme.md                       # Project documentation
 ```
 
 ---
